@@ -13,7 +13,7 @@ Splitter.SplitPath("a\/b") ->> {"a/b"}
 ```
 ```c#
 // User '\' as token
-Splitter.SplitPath("a\\\\\/b") ->> {"a\\", "b"}
+Splitter.SplitPath(@"a\\\\\/b") ->> {"a\\/b"}
 ```
 ```c#
 // User '\' as token
