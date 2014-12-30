@@ -1,26 +1,27 @@
 PathSplit
 =========
 
-A .NET custom path split method which use '/' as delimetter.
+A .NET custom path split method which use '\' as escape character.
 
 Examples:
 ```c#
+// User '/' as delimetter
 Splitter.SplitPath("a/b/c") ->> {"a", "b", "c"}
 ```
 ```c#
-// User '\' as token
+// User '/' as delimetter
 Splitter.SplitPath("a\/b") ->> {"a/b"}
 ```
 ```c#
-// User '\' as token
+// User '/' as delimetter
 Splitter.SplitPath(@"a\\\\\/b") ->> {"a\\/b"}
 ```
 ```c#
-// User '\' as token
+// User '/' as delimetter
 Splitter.SplitPath("a\//b/c\\") ->> {"a/", "b", "c\"}
 ```
 ```c#
-// User '@' as token
-Splitter.SplitPath("a@/b",'@') ->> {"a/b"}
+// User '@' as delimetter
+Splitter.SplitPath("a@b@c\@",'@') ->> {"a", "b", "c@"}
 ```
 
